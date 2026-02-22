@@ -1,0 +1,18 @@
+# Python virtual env
+.venv/
+venv/
+backend/venv/
+
+# Node modules
+node_modules/
+Frontend/node_modules/
+Frontend/guava-app/node_modules/
+
+# Logs/temp
+*.log
+backend/backend_pid_*.txt
+backend/backend_out_*.log
+backend/backend_err_*.log
+
+# Large model files (too big for normal GitHub push)
+backend/*.h5
