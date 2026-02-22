@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Upload, Activity, Target, Search, CheckCircle2, AlertCircle, Layers, Image as ImageIcon, Cpu } from 'lucide-react';
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+
 export default function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
@@ -39,7 +41,7 @@ export default function App() {
     formData.append("file", selectedImage);
 
     try {
-      const response = await fetch("http://localhost:8000/analyze", {
+      const response = await fetch(`${API_BASE}/analyze`, {
         method: "POST",
         body: formData,
       });
