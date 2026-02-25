@@ -15,4 +15,4 @@ backend/backend_out_*.log
 backend/backend_err_*.log
 
 # Large model files (too big for normal GitHub push)
-backend/*.h5
+
